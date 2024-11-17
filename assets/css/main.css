@@ -245,6 +245,9 @@ a {
   border-width: 3px;
   border-color: #76a713;
 }
+.service:hover h3::before {
+  width: 50%;
+}
 .font16-block {
   display: block;
   color: #000;
@@ -404,7 +407,7 @@ a {
   content: "";
   height: 85%;
   position: absolute;
-  bottom: 0;
+  bottom: 6px;
   left: 0;
   right: 0;
   background-image: -webkit-linear-gradient(
@@ -502,10 +505,35 @@ a {
   border-top: 1px solid #679210;
   text-align: center;
 }
-
+.shopping {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  margin-right: -2px;
+  margin-top: 2px;
+  visibility: hidden;
+  transform: translateX(20px); /* Dịch sang phải */
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+.shopping i {
+  color: #fff;
+  background: #679210;
+  padding: 9px 10px;
+  width: auto;
+  margin-bottom: 5px;
+  border-radius: 10px 0 0px 0px;
+}
+.food:hover .shopping {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
 /* Định dạng cho nội dung chính */
 .container {
-  display: block;
+  display: flex;
 }
 
 /* Định dạng cho thông báo trên điện thoại */
