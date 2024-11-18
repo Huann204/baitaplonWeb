@@ -114,6 +114,9 @@ a {
 .hotline p {
   margin-left: 10px;
 }
+.hotline i {
+  font-size: 22px;
+}
 .btn-info .count {
   position: absolute;
   top: 2px;
